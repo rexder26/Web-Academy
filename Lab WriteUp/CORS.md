@@ -59,3 +59,5 @@ C) CORS vulnerability with trusted insecure protocols
     </script>`
 
 D) CORS vulnerability with internal network pivot attack
+
+    
