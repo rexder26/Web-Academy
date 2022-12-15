@@ -1,7 +1,7 @@
-# Title: Authentication , Web Academy
-By: Nathan Hailu
-Description: Labs are solved and their write up is here.
-Date: Tue 11/15/2022
+# Title: Authentication , *Web Academy*
+- 👨‍💻By: Nathan Hailu
+- 🗒Description: Labs are solved and their write up is here.
+- 📅Date: Tue 11/15/2022
 
 ================= { START } ==============================
 

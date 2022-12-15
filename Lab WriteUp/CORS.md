@@ -1,7 +1,7 @@
-# Title: Cross origin resource sharing , Web Academy
-- By👨‍💻: Nathan Hailu
-- Description🗒: Labs are solved and their write up is here.
-- Date📅: Mon 12/12/2022
+# Title: Cross origin resource sharing , *Web Academy*
+- 👨‍💻By: Nathan Hailu
+- 🗒Description: Labs are solved and their write up is here.
+- 📅Date: Mon 12/12/2022
 
 ================= { START } ==============================
 
