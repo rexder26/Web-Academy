@@ -5,7 +5,8 @@
 
 ================= { START } ==============================
 
-> You try course if u have seen "Access-Control-Allow-Credentials: true" this kinda response headers!
+> You try cors if u have seen "Access-Control-Allow-Credentials: true" this kinda response headers!
+
 A) **CORS vulnerability with basic origin reflection**
 
     When we try to test CORS we will see the response if it contains the acess-control-allow-origin or acess-control-allow-credentials header. if it have that we will try to use the origin header on the request and try to see if he pass or block it. if it pass we can exploit it with some CORS POC scripts
