@@ -5,11 +5,11 @@
 
 ================= { START } ==============================
 
-> You try cors if u have seen "Access-Control-Allow-Credentials: true" this kinda response headers!
+> You can try cors if u have seen "Access-Control-Allow-Credentials: true" this kinda response headers!
 
 A) **CORS vulnerability with basic origin reflection**
 
-    When we try to test CORS we will see the response if it contains the acess-control-allow-origin or acess-control-allow-credentials header. if it have that we will try to use the origin header on the request and try to see if he pass or block it. if it pass we can exploit it with some CORS POC scripts
+    When we try to test CORS we will see the response if it contains the **access-control-allow-origin** or **access-control-allow-credentials** header. if it have that we will try to use the origin header on the request and try to see if he pass or block it. if it pass we can exploit it with some CORS POC scripts
        
                 <script>
             var req = new XMLHttpRequest();
@@ -26,7 +26,7 @@ A) **CORS vulnerability with basic origin reflection**
 
 B) **CORS vulnerability with trusted null origin**
 
-    Thanks to developers they have forgoted 'null' by whitelisting it for local work. so first, we will try to add origin: example.con then we will try origin: * but when we try origin: null  it will responde with so Access-Control-Allow-Origin: null boom! we just need to run CORS POC script.
+    Thanks to developers they have forgotten 'null' by whitelisting it for local work. so first, we will try to add origin: example.con then we will try origin: * but when we try origin: null  it will respond with so **Access-Control-Allow-Origin: null** boom! we just need to run CORS POC script.
 
                 <iframe sandbox="allow-scripts allow-top-navigation allow-forms" srcdoc="<script>
             var req = new XMLHttpRequest();
@@ -52,7 +52,7 @@ C) **CORS vulnerability with trusted insecure protocols**
             Access-Control-Allow-Origin: https://attacker.OriginalURL.com
             Access-Control-Allow-Credentials: true
         }
-    on this lab when we try all they wont work except the method 4, there for we will try to find a subdomain, for that you can use tools, also you can check the site endpoints.
+    on this lab when we try all they won't work except the method 4, there for we will try to find a subdomain, for that you can use tools, also you can check the site endpoints.
     finally, you will get stock.webacademy.com domain so we will try any open vuln on it if the site have some vuln like xss, we will craft our JS code like below.
 
     <script>
