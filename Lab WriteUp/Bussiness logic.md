@@ -26,4 +26,6 @@ B) 2FA broken logic
 
         mfa-code=1829
 
-C) 
+C) High-level logic vulnerability
+    The website do client side validations, it check the price of a cart with client side javascript this can be manipulated by using some negative integers with the quantity of a product so i can buy $1339 price product by adding -15 quantity of $86 product when they are added the total price will be minimum and might be equal with the money we have in our stock.
+
