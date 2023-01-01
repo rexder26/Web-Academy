@@ -36,4 +36,6 @@ D) Inconsistent handling of exceptional input
 
     Displayed: "hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1@dontwannacry.com"
     So i can have admin account.
-    
+
+E) Inconsistent security controls
+    This lab, doesnt have any flaw on the registration and login part. but you have "Update email" feature. The admins have @Dontwannacry.com domain on the email so, it i registered with normal and changed my email to this domain then i can exploit the site/lab.
