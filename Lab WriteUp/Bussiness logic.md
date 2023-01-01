@@ -29,4 +29,11 @@ B) 2FA broken logic
 C) High-level logic vulnerability
     The website do client side validations, it check the price of a cart with client side javascript this can be manipulated by using some negative integers with the quantity of a product so i can buy $1339 price product by adding -15 quantity of $86 product when they are added the total price will be minimum and might be equal with the money we have in our stock.
 
-D) 
+D) Inconsistent handling of exceptional input
+    This site displays 256 characters on the email field so, if i added 256 character with an admin email and extra {dot normal email} on the registration, then i can have the admin email displayed and the normal will be cut out. This helps to accept verification emails with my normal email, and have admin access with the admin email.
+    solution: 
+    email:"hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1@dontwannacry.com.exploit-0a2100e904a468d2c061673a01a40020.exploit-server.net"  
+
+    Displayed: "hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1hacker1@dontwannacry.com"
+    So i can have admin account.
+    
