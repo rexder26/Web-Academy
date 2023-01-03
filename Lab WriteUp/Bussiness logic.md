@@ -41,4 +41,8 @@ E) Inconsistent security controls
     This lab, doesnt have any flaw on the registration and login part. but you have "Update email" feature. The admins have @Dontwannacry.com domain on the email so, it i registered with normal and changed my email to this domain then i can exploit the site/lab.
 
 F) Weak isolation on dual-use endpoint
-    Here The lab have a password changing feature.
+    Here The lab have a password changing feature.But it requires for Username, Current Password and New password. Here you can add any username you want, so if i don't know the current password of other users i can remove the current-password= parameter and i can change password of any users.
+    1ST: csrf=hgWjhMMaGot3Veae57wqjvZiDZskB1kX&username=administrator&**current-password=peter**&new-password-1=peter&new-password-2=peter
+    HACKER: csrf=hgWjhMMaGot3Veae57wqjvZiDZskB1kX&username=administrator&new-password-1=peter&new-password-2=peter
+
+    
