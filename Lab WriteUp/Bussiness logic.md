@@ -50,3 +50,6 @@ G) Password reset broken logic
 
 	temp-forgot-password-token=FHxuvaqUKBZ31QE5PYpJabawSdcc57vM&username=carlos&new-password-1=test&new-password-2=test
 		-> here we can change the user name and we got his password!
+
+H) 2FA simple bypass
+    - Some Sites will ask for OTP code in different page rather than the login, here the site know that u r logged it, so if you have the path for my profile or other pages on the site by just editing the url to that path you can skip the 2FA.
