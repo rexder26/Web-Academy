@@ -46,7 +46,7 @@ F) Weak isolation on dual-use endpoint
     HACKER: csrf=hgWjhMMaGot3Veae57wqjvZiDZskB1kX&username=administrator&new-password-1=peter&new-password-2=peter
 
 G) Password reset broken logic
-    When we ask the site for forgotted password reset, the site sends some link that have a random and uniqeu token that possesses to our account. we cant break this but if we intercept the request and send the new password after we accessed the password reseting page, we might have access to change other users pass to because of the broken logic. like below
+    When we ask the site for forgotted password reset, the site sends some link that have a random and unique token that possesses to our account. we cant break this but if we intercept the request and send the new password after we accessed the password reseting page, we might have access to change other users pass to because of the broken logic. like below
 
 	temp-forgot-password-token=FHxuvaqUKBZ31QE5PYpJabawSdcc57vM&username=carlos&new-password-1=test&new-password-2=test
 		-> here we can change the user name and we got his password!
