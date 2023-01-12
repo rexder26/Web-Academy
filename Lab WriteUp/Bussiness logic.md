@@ -68,7 +68,20 @@ I) Insufficient workflow validation
             Content-Length: 0
 
 J) Authentication bypass via flawed state machine
-    - This page validates the priviledge of a user with a page called role-selector so if we drop/skip this request while signing in BOOM!
+    - This page validates the privilege of a user with a page called role-selector so if we drop/skip this request while signing in BOOM!
     -  In Burp, turn on proxy intercept then log in.
         Forward the POST /login request. The next request is GET /role-selector. Drop this request and then browse to the lab's home page. Observe that your role has defaulted to the administrator role and you have access to the admin panel.
+
+K) Flawed enforcement of business rules
+    - There are 2 coupon codes on this system if you added them sequentially it works else if u added just the 1st 2 time+ it is invalid so by reusing them sequentially it will work
+      - NEWCUST5	-$5.00		
+        SIGNUP30	-$401.10		
+        NEWCUST5	-$5.00		
+        SIGNUP30	-$401.10		
+        NEWCUST5	-$5.00		
+        SIGNUP30	-$401.10		
+        NEWCUST5	-$5.00		
+        SIGNUP30	-$401.10	                =>   LIKE THIS.!!!
+
+
     
