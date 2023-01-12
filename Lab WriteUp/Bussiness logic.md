@@ -53,3 +53,19 @@ G) Password reset broken logic
 
 H) 2FA simple bypass
     - Some Sites will ask for OTP code in different page rather than the login, here the site know that u r logged it, so if you have the path for my profile or other pages on the site by just editing the url to that path you can skip the 2FA.
+  
+I) Insufficient workflow validation
+    - SOme Sites do some confirmations and this site, when you ask for placing your order it will confirm on the way it confirm is it checks if you have enough money and if you have it will redirect to **/cart/order-confirmation?order-confirmed=true** if you don't have it will redirect to **/cart?err=INSUFFICIENT_FUNDS** so , we hackers can intercept and chang the failed redirecttion header to the working on so BOOM!!!
+      - ERROR:
+            HTTP/1.1 303 See Other
+            Location: /cart?err=INSUFFICIENT_FUNDS
+            Connection: close
+            Content-Length: 0
+      - Working:
+            HTTP/1.1 303 See Other
+            Location: /cart?err=INSUFFICIENT_FUNDS  =>  /cart/order-confirmation?order-confirmed=true
+            Connection: close
+            Content-Length: 0
+
+
+    
