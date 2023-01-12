@@ -83,5 +83,6 @@ K) Flawed enforcement of business rules
         NEWCUST5	-$5.00		
         SIGNUP30	-$401.10	                =>   LIKE THIS.!!!
 
+The left overs are time Wasting labs!!
 
     
